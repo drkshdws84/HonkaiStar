@@ -1,4 +1,4 @@
-/* Reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,45 +6,51 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0f0f1a;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+  background: #0b0c10 url('https://www.transparenttextures.com/patterns/stardust.png');
   color: #f0f0f0;
   padding: 20px;
   line-height: 1.6;
+  background-size: cover;
+  background-repeat: repeat;
 }
 
+/* Header */
 header {
   text-align: center;
-  padding: 30px 10px;
-  background: #1a1a2e;
-  border-bottom: 2px solid #ff6b81;
+  padding: 40px 10px;
+  background: linear-gradient(145deg, #1f2833, #0b0c10);
+  border-bottom: 3px solid #45a29e;
 }
 
 header h1 {
   font-size: 3rem;
-  color: #ff6b81;
+  color: #66fcf1;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #c5c6c7;
   margin-top: 10px;
 }
 
+/* Main Layout */
 main {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
+/* Section Titles */
 .gallery h2,
 .form-section h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #ffd369;
+  color: #66fcf1;
 }
 
+/* Character Cards */
 .image-cards {
   display: flex;
   flex-wrap: wrap;
@@ -53,19 +59,19 @@ main {
 }
 
 .card {
-  background: #1f1f2e;
-  border: 1px solid #333;
+  background: #1f2833;
+  border: 1px solid #45a29e;
   border-radius: 10px;
   overflow: hidden;
   width: 280px;
   text-align: center;
-  transition: transform 0.3s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 107, 129, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 252, 241, 0.4);
 }
 
 .card img {
@@ -75,18 +81,20 @@ main {
 }
 
 .card h3 {
-  color: #00adb5;
+  color: #66fcf1;
   margin-top: 10px;
+  font-weight: 700;
 }
 
 .card p {
   padding: 0 10px 15px;
-  color: #ddd;
+  color: #c5c6c7;
   font-size: 0.95rem;
 }
 
+/* Form Section */
 .form-section {
-  background-color: #1a1a2e;
+  background-color: #1f2833;
   padding: 30px;
   border-radius: 10px;
   margin-top: 40px;
@@ -94,7 +102,7 @@ main {
 }
 
 .form-section p {
-  color: #ccc;
+  color: #c5c6c7;
   margin-bottom: 20px;
 }
 
@@ -108,37 +116,50 @@ form {
 
 form label {
   text-align: left;
-  color: #eee;
+  color: #f0f0f0;
+  font-weight: bold;
 }
 
 form input,
 form textarea {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
-  background: #2c2c3e;
+  background: #2c2f33;
   color: #fff;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #66fcf1;
 }
 
 form button {
   padding: 12px;
-  background: #ff6b81;
-  color: white;
+  background: linear-gradient(145deg, #45a29e, #66fcf1);
+  color: #0b0c10;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 252, 241, 0.3);
 }
 
 form button:hover {
-  background: #ff4757;
+  transform: scale(1.05);
+  background: #66fcf1;
+  color: #0b0c10;
 }
 
+/* Footer */
 footer {
   text-align: center;
   margin-top: 60px;
   color: #888;
   font-size: 0.9rem;
 }
+
 
