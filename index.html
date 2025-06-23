@@ -13,30 +13,31 @@
       background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
       color: white;
       overflow-x: hidden;
+      position: relative;
     }
 
     .shooting-star {
       position: absolute;
       top: -50px;
       width: 2px;
-      height: 100px;
-      background: linear-gradient(white, transparent);
-      transform: rotate(-45deg);
-      animation: shoot 3s linear infinite;
+      height: 80px;
+      background: linear-gradient(to bottom right, white, transparent);
+      transform: rotate(45deg);
+      animation: shoot 4s linear infinite;
       opacity: 0.7;
-      z-index: 1;
+      z-index: 0;
     }
 
     @keyframes shoot {
       0% {
-        transform: translateX(0) translateY(0) rotate(-45deg);
+        transform: translateX(0) translateY(0) rotate(45deg);
         opacity: 0;
       }
       20% {
         opacity: 1;
       }
       100% {
-        transform: translateX(-100vw) translateY(100vh) rotate(-45deg);
+        transform: translateX(100vw) translateY(100vh) rotate(45deg);
         opacity: 0;
       }
     }
@@ -85,6 +86,7 @@
       margin: 2rem auto;
       max-width: 500px;
       display: block;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     input, textarea, button {
@@ -175,6 +177,3 @@
 </body>
 </html>
 
-  </footer>
-</body>
-</html>
