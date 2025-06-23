@@ -6,6 +6,103 @@
   <title>Honkai: Star Rail Tribute</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .shooting-star {
+      position: absolute;
+      top: -50px;
+      width: 2px;
+      height: 100px;
+      background: linear-gradient(white, transparent);
+      transform: rotate(-45deg);
+      animation: shoot 3s linear infinite;
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    @keyframes shoot {
+      0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100vw) translateY(100vh) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #555;
+      border-radius: 10px;
+      padding: 1rem;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .form-section form, .poll-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #888;
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      margin: 2rem auto;
+      max-width: 500px;
+      display: block;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4dd0e1;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <!-- Sparkle Shooting Star Elements -->
@@ -23,7 +120,7 @@
 
   <main>
     <section class="gallery">
-      <h2>Featured Characters</h2>
+      <h2 style="text-align: center;">Featured Characters</h2>
       <div class="image-cards">
         <div class="card">
           <img src="images/traveler.jpeg" alt="Traveler" />
@@ -44,8 +141,8 @@
     </section>
 
     <section class="form-section">
-      <h2>Your Star Rail Memory</h2>
-      <p>Which Honkai: Star Rail character resonates with you most?</p>
+      <h2 style="text-align: center;">Your Star Rail Memory</h2>
+      <p style="text-align: center;">Which Honkai: Star Rail character resonates with you most?</p>
       <form method="post" action="https://formspree.io/f/xayrjjjp">
         <label for="name">Your Name</label>
         <input id="name" name="name" type="text" required />
@@ -61,7 +158,7 @@
     </section>
 
     <section class="poll">
-      <h2>Which Path Would You Follow?</h2>
+      <h2 style="text-align: center;">Which Path Would You Follow?</h2>
       <form class="poll-box">
         <label><input type="radio" name="path" /> Destruction</label><br />
         <label><input type="radio" name="path" /> Hunt</label><br />
@@ -74,6 +171,10 @@
 
   <footer>
     <p>Made with 💫 aboard the Astral Express | © 2025</p>
+  </footer>
+</body>
+</html>
+
   </footer>
 </body>
 </html>
